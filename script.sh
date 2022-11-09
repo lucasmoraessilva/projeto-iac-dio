@@ -10,7 +10,11 @@ createDirectories(){
 }
 
 createGroups(){
-
+    # Criando grupos indicados no projeto
+    echo Criando grupos de usuários
+    groupadd GRP_ADM
+    groupadd GRP_VEN
+    groupadd GRP_SEC
 }
 
 createUsers(){
