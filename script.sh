@@ -40,3 +40,27 @@ configureDirectories(){
     chown root:GRP_VEN /ven
     chown root:GRP_SEC /sec
 }
+
+deleteOldConfigurations(){
+    # Deletando diretórios com configurações antigas
+    echo Deletando diretórios antigos
+    rm -rf /publico /adm /ven /sec
+
+    # Deletando usuários antigos
+    echo Deletando usuários antigos
+    userdel -r carlos
+    userdel -r maria
+    userdel -r joao
+    userdel -r debora
+    userdel -r sebastiana
+    userdel -r roberto
+    userdel -r josefina
+    userdel -r amanda
+    userdel -r rogerio
+
+    # Deletando grupos antigos
+    echo Deletando grupos antigos
+    groupdel GRP_ADM
+    groupdel GRP_VEN
+    groupdel GRP_SEC
+}
