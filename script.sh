@@ -32,3 +32,11 @@ createUsers(){
     useradd -m -g GRP_SEC -s /bin/bash amanda
     useradd -m -g GRP_SEC -s /bin/bash rogerio
 }
+
+configureDirectories(){
+    # Configurando dono e grupo dos diretórios conforme indicado no projeto
+    echo Configurando diretórios
+    chown root:GRP_ADM /adm
+    chown root:GRP_VEN /ven
+    chown root:GRP_SEC /sec
+}
