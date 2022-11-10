@@ -64,3 +64,22 @@ deleteOldConfigurations(){
     groupdel GRP_VEN
     groupdel GRP_SEC
 }
+
+main(){
+    # Deletando configurações antigas
+    deleteOldConfigurations
+
+    # Criando diretórios
+    createDirectories
+
+    # Criando grupos
+    createGroups
+
+    # Criando usuários
+    createUsers
+
+    # Configurando novos diretórios
+    configureDirectories
+}
+
+main
